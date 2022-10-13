@@ -1,5 +1,6 @@
 import React from "react";
 import Meta from "../components/Meta";
+import { projects } from "../projectsData";
 
 const portfolio = () => {
   return (
@@ -9,6 +10,7 @@ const portfolio = () => {
         description={"Suite de 70  mots"}
       />
       <h2>PORTFOLIO</h2>
+      <ul>{projects}</ul>
     </div>
   );
 };
