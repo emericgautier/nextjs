@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Meta from "../components/Meta";
 import { projects } from "../projectsData";
@@ -10,11 +11,19 @@ const portfolio = () => {
         description={"Suite de 70  mots"}
       />
       <h2>PORTFOLIO</h2>
-      <ul>{projects}</ul>
+      <ul>
+        {projects.map((project) => (
+          <li key={project.id}>
+            <Link href="projects/[id]" as={"projects/" + project.id}>
+              <a>
+                {project.title} <span>➡️</span>
+              </a>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
-
-// Executer le code coté serveur
 
 export default portfolio;

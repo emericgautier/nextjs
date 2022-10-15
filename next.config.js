@@ -2,6 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  images: {
+    loader: "akamai",
+    path: "",
+  },
+  contentSecurityPolicy:
+    "default-src 'none'; script-src 'self'; style-src 'nonce-{style-nonce}'; connect-src 'self'; img-src 'self'; font-src 'self'; base-uri 'self'; child-src 'self';",
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
